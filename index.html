@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мій проект</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0d09d3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d09d3'/%3E%3Ctext x='50' y='57' font-size='50' text-anchor='middle' fill='%23fff' font-family='Arial'%3EM%3C/text%3E%3C/svg%3E">
+  </head>
+  <body>
+      <a class="skip-link" href="#main">Пропустити до контенту</a>
+    <div class="container">
+    <header>
+      <nav aria-label="Головна навігація">
+        <a href="#about">Про мене</a> |
+        <a href="#contacts">Контакти</a>
+  <button id="theme-toggle" type="button" aria-label="Перемкнути тему" style="margin-left:12px;"><i id="theme-icon" class="fa-solid fa-sun"></i></button>
+  <button id="theme-reset" type="button" aria-label="Скинути тему" style="margin-left:8px;">Скинути тему</button>
+      </nav>
+      <h1 id="main-heading">Вітаю на моєму сайті</h1>
+      <p>Голова IT</p>
+    </header>
+
+  <main id="main">
+      <section id="hero" aria-labelledby="main-heading" class="hero-hero">
+        <video id="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
+          <source data-src="hero.mp4" type="video/mp4">
+        </video>
+          <div class="hero-overlay">
+          <h2>Я створюю сучасні сайти</h2>
+          <p>Навчуся, творю та ділюся проектами — зайди та подивись мої роботи.</p>
+          <p><a class="cta" href="#projects">Переглянути проекти</a></p>
+        </div>
+      </section>
+      <section id="about">
+        <h2>Про мене</h2>
+        <p>Мені 16 років. Цікавлюся фронтендом, вивчаю HTML, CSS та JavaScript. Хочу створити власний проєкт-портфоліо.</p>
+      </section>
+      <section id="contacts">
+        <h2>Контакти</h2>
+        <p>GitHub: <a href="https://github.com/1k1e1h1t1" target="_blank" rel="noopener noreferrer">1k1e1h1t1</a></p>
+        <p>Email: <a id="email-link" data-user="oportoo001hoop" data-domain="gmail.com" href="#">[показати email]</a></p>
+      </section>
+      <section id="projects">
+        <h2>Мої проекти</h2>
+        <p>Нижче — список сайтів, які я створив. Можете додати новий проект у форму нижче.</p>
+        <form id="project-form" aria-label="Додати проект">
+          <label for="project-name">Назва:</label>
+          <input id="project-name" name="name" type="text" required placeholder="Наприклад: Мій лендінг">
+          <label for="project-url">URL:</label>
+          <input id="project-url" name="url" type="url" required placeholder="https://example.com">
+          <label for="project-type">Тип проекту:</label>
+          <select id="project-type" name="type">
+            <option value="web">Веб-сайт</option>
+            <option value="blog">Блог</option>
+            <option value="app">Додаток</option>
+            <option value="other">Інше</option>
+          </select>
+          <label for="project-desc">Опис (опціонально):</label>
+          <input id="project-desc" name="desc" type="text" placeholder="Короткий опис проекту">
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+            <button id="add-project" type="submit">Додати проект</button>
+            <button id="clear-projects" type="button">Очистити список</button>
+            <button id="export-projects" type="button" title="Експорт проектів">Експорт</button>
+            <button id="import-projects" type="button" title="Імпорт проектів">Імпорт</button>
+            <input id="import-file" type="file" accept="application/json" style="display:none" />
+          </div>
+        </form>
+        <button id="toggle-projects" type="button">Показати мої сайти</button>
+        <ul id="projects-list" hidden aria-live="polite"></ul>
+      </section>
+    </main>
+    <footer>
+      <small>&copy; <span id="year"></span> Мій проект</small>
+    </footer>
+    </div>> 
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+  </body>
+    </div>
+</html>
+</html>
+
+
+
+
